@@ -14,7 +14,6 @@ const Banner = () => {
               className="w-48 h-32 md:w-full md:h-48 object-cover"
             />
           </div>
-
           {/* Text content on the right */}
           <div className="flex-1 text-center md:text-left">
             <div className="text-white">
@@ -22,7 +21,6 @@ const Banner = () => {
               <h2 className="text-2xl md:text-4xl font-semibold text-black tracking-wide">
                 PAY DAY SALE!!
               </h2>
-
               {/* Subtitle */}
               <p className="mt-2 text-base md:text-xl text-[#61646B]">
                 Nikmati promo spektakuler
@@ -47,7 +45,6 @@ const Banner = () => {
               className="w-auto h-32 md:w-full md:h-48 object-cover"
             />
           </div>
-
           {/* Text content on the right */}
           <div className="flex-1 text-center md:text-left">
             <div className="text-white">
@@ -55,7 +52,6 @@ const Banner = () => {
               <h2 className="text-2xl md:text-4xl font-semibold text-[#FFC045] tracking-wide">
                 GRATIS ONGKIR 50%
               </h2>
-
               {/* Subtitle */}
               <p className="mt-2 text-base md:text-xl text-white">
                 Klaim voucher gratis ongkos kirim kamu.

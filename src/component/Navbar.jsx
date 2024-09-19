@@ -50,7 +50,6 @@ const Navbar = () => {
               style={{ width: "171px", height: "54px" }}
             />
           </a>
-
           {/* Form Pencarian dan Ikon Keranjang */}
           <div className="hidden md:flex flex-1 items-center mx-4">
             <form className="relative flex-1">
@@ -71,7 +70,6 @@ const Navbar = () => {
               style={{ color: "#0A91AB" }}
             />
           </div>
-
           {/* Mobile Navigation Icon */}
           <div
             onClick={handleNav}
@@ -105,7 +103,6 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-
       {/* Mobile Sidebar */}
       <div
         className={

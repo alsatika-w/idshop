@@ -22,13 +22,12 @@ const TopupAndBillsMenu = () => {
     <div className="px-4 md:px-24 mt-10 mx-4 md:mx-24 p-4 bg-white rounded-md">
       {/* Main Heading */}
       <h2 className="text-lg mb-4">Top Up dan Tagihan</h2>
-
       {/* Menu Navigation */}
       <div className="relative flex overflow-x-auto p-2 border-b border-gray-300">
         <div className="flex flex-1 justify-between w-full">
           <div
             onClick={() => handleMenuChange("pulsa")}
-            className={`p-2 mx-1 cursor-pointer ${
+            className={`p-2 mx-1 cursor-pointer hover:text-[#0A91AB] ${
               selectedMenu === "pulsa"
                 ? "text-[#0A91AB] border-b-2 border-[#0A91AB]"
                 : "text-gray-600"
@@ -38,7 +37,7 @@ const TopupAndBillsMenu = () => {
           </div>
           <div
             onClick={() => handleMenuChange("paketData")}
-            className={`p-2 mx-1 cursor-pointer ${
+            className={`p-2 mx-1 cursor-pointer hover:text-[#0A91AB] ${
               selectedMenu === "paketData"
                 ? "text-[#0A91AB] border-b-2 border-[#0A91AB]"
                 : "text-gray-600"
@@ -48,7 +47,7 @@ const TopupAndBillsMenu = () => {
           </div>
           <div
             onClick={() => handleMenuChange("listrik")}
-            className={`p-2 mx-1 cursor-pointer ${
+            className={`p-2 mx-1 cursor-pointer hover:text-[#0A91AB] ${
               selectedMenu === "listrik"
                 ? "text-[#0A91AB] border-b-2 border-[#0A91AB]"
                 : "text-gray-600"
@@ -58,7 +57,7 @@ const TopupAndBillsMenu = () => {
           </div>
           <div
             onClick={() => handleMenuChange("uangElektronik")}
-            className={`p-2 mx-1 cursor-pointer ${
+            className={`p-2 mx-1 cursor-pointer hover:text-[#0A91AB] ${
               selectedMenu === "uangElektronik"
                 ? "text-[#0A91AB] border-b-2 border-[#0A91AB]"
                 : "text-gray-600"
@@ -68,7 +67,7 @@ const TopupAndBillsMenu = () => {
           </div>
           <div
             onClick={() => handleMenuChange("airPDAM")}
-            className={`p-2 mx-1 cursor-pointer ${
+            className={`p-2 mx-1 cursor-pointer hover:text-[#0A91AB] ${
               selectedMenu === "airPDAM"
                 ? "text-[#0A91AB] border-b-2 border-[#0A91AB]"
                 : "text-gray-600"
@@ -84,20 +83,24 @@ const TopupAndBillsMenu = () => {
             />
             {dropdownOpen && (
               <>
-                <option className="cursor-pointer hover:bg-gray-200">History Pembayaran</option>
-                <option className="cursor-pointer hover:bg-gray-200">Pengaturan Akun</option>
-                <option className="cursor-pointer hover:bg-gray-200">Bantuan</option>
+                <option className="cursor-pointer hover:bg-[#0A91AB] text-gray-600 hover:text-white">
+                  History Pembayaran
+                </option>
+                <option className="cursor-pointer hover:bg-[#0A91AB] text-gray-600 hover:text-white">
+                  Pengaturan Akun
+                </option>
+                <option className="cursor-pointer hover:bg-[#0A91AB] text-gray-600 hover:text-white">
+                  Bantuan
+                </option>
               </>
             )}
           </div>
         </div>
       </div>
-
       {/* Content */}
       <div className="p-4">
         {selectedMenu === "pulsa" && (
           <div className="relative">
-            {/* <IconPhone className="absolute left-3 top-1/2 transform -translate-y-1/2 text-xl text-gray-500" /> */}
             <form className="flex flex-col sm:flex-row gap-4">
               <div className="relative w-full sm:w-2/3">
                 <IconPhone className="absolute left-3 top-1/2 transform -translate-y-1/2 text-xl text-gray-500" />
@@ -122,7 +125,6 @@ const TopupAndBillsMenu = () => {
             </form>
           </div>
         )}
-
         {selectedMenu === "paketData" && (
           <div className="relative">
             {/* <IconPhone className="absolute left-3 top-1/2 transform -translate-y-1/2 text-xl text-gray-500" /> */}
@@ -150,11 +152,8 @@ const TopupAndBillsMenu = () => {
             </form>
           </div>
         )}
-
         {selectedMenu === "listrik" && (
           <div className="relative">
-            {/* <IconWavesElectricity className="absolute left-3 top-1/2 transform -translate-y-1/2 text-xl text-gray-500" /> */}
-
             <form className="flex flex-col sm:flex-row gap-4">
               <div className="relative w-full sm:w-2/3">
                 <IconWavesElectricity className="absolute left-3 top-1/2 transform -translate-y-1/2 text-xl text-gray-500" />
@@ -179,7 +178,6 @@ const TopupAndBillsMenu = () => {
             </form>
           </div>
         )}
-
         {selectedMenu === "uangElektronik" && (
           <div>
             <form className="flex flex-col sm:flex-row gap-4">
@@ -203,7 +201,6 @@ const TopupAndBillsMenu = () => {
             </form>
           </div>
         )}
-
         {selectedMenu === "airPDAM" && (
           <div>
             <form className="flex flex-col sm:flex-row gap-4">
@@ -233,34 +230,3 @@ const TopupAndBillsMenu = () => {
 };
 
 export default TopupAndBillsMenu;
-
-{
-  /* {dropdownOpen && (
-              <div className="absolute right-0 top-full mt-2 bg-white shadow-lg rounded-md border border-gray-300 w-48">
-              <a
-                href="#"
-                className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-                >
-                History Pembayaran
-              </a>
-              <a
-                href="#"
-                className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-                >
-                Pengaturan Akun
-              </a>
-              <a
-                href="#"
-                className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-                >
-                Bantuan
-              </a>
-              <a
-                href="#"
-                className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-                >
-                Keluar
-              </a>
-            </div>
-          )}  */
-}

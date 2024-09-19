@@ -113,9 +113,11 @@ const Items = [
 const RecomendedItems = () => {
   return (
     <div className="relative mt-10 mx-4 md:mx-24 p-4">
+      {/* Heading */}
       <h2 className="mb-4 font-semibold text-lg text-[#19191B]">
         Rekomendasi Untuk Kamu
       </h2>
+      {/* Content */}
       <div className="w-full md:w-full relative flex items-center justify-center h-auto">
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-6">
           {Items.map((item) => (

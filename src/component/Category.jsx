@@ -40,32 +40,33 @@ const Category = () => {
 
   return (
     <div className="mt-10 mx-4 md:mx-24 p-4 bg-white rounded-md">
-    {/* Judul Kategori */}
-    <h2 className="text-lg mb-4">Kategori</h2>
-    
-    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2 mb-8">
-      {/* Grid Kategori */}
-      {categories.map((category) => (
-        <div
-          key={category.id}
-          className={`bg-white cursor-pointer hover:shadow-md transition-shadow ${
-            selectedCategories.includes(category.name) ? "ring-2 ring-blue-500" : ""
-          } border border-gray-300`}
-          onClick={() => handleCategoryClick(category.name)}
-        >
-          <img
-            src={category.image}
-            alt={category.name}
-            className="w-full h-24 object-contain"
-          />
-          <div className="p-2 text-center">
-            <p className="text-xs sm:text-sm font-medium">{category.name}</p>
+      {/* Title */}
+      <h2 className="text-lg mb-4">Kategori</h2>
+
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2 mb-8">
+        {/* Grid category */}
+        {categories.map((category) => (
+          <div
+            key={category.id}
+            className={`bg-white cursor-pointer hover:shadow-md transition-shadow ${
+              selectedCategories.includes(category.name)
+                ? "ring-2 ring-blue-500"
+                : ""
+            } border border-gray-300`}
+            onClick={() => handleCategoryClick(category.name)}
+          >
+            <img
+              src={category.image}
+              alt={category.name}
+              className="w-full h-24 object-contain"
+            />
+            <div className="p-2 text-center">
+              <p className="text-xs sm:text-sm font-medium">{category.name}</p>
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
-  </div>
-  
   );
 };
 

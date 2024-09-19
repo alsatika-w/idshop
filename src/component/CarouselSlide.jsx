@@ -29,7 +29,7 @@ const CarouselSlide = () => {
               <img
                 src={image.src}
                 alt={image.alt}
-                className="object-cintain w-[400px] lg:h-[380px]"
+                className="object-contain w-[400px] lg:h-[380px]"
               />
             </div>
           ))}
